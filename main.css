@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #12181B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    position: relative;
+    border: 7px solid #12181B;
+    text-align: center;
+    border-radius: 50%;
+    width: 30rem;
+    height:30rem;
+    font-size: 2rem;
+    padding: 2rem;
+    box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                inset 4px 4px 10px rgba(0,0,0,0.5),
+                inset -4px -4px 10px rgba(67,67,67,0.5),
+                4px 4px 10px rgba(0,0,0,0.3);
+    
+
+}
+.clock-lines{
+    position: relative;
+    background-color: #12181B;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+
+}
+.clock-lines::after{
+    transform: rotate(90deg);
+}
+.clock-lines::after,
+.clock-lines::before,
+.clock-lines .lines{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #1F51FF;
+  z-index: 0;
+  left: 49%;
+}
+.clock-lines .lines{
+    background-color: #cbc2bd;
+    width: 3px;
+}
+.one{
+    transform: rotate(30deg);
+}
+.two{
+    transform: rotate(60deg);
+}
+.three{
+    transform: rotate(120deg);
+}
+.four{
+    transform: rotate(150deg);
+}
+.ring{
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+    background: #12181B;
+    border-radius: 100%;
+    z-index: 1;
+}
+.ring::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 18px;
+    margin-left: -9px;
+    margin-top: -6px;
+    background: #4d4b63;
+    z-index: 11;
+}
+.arrow{
+    position: absolute;
+    top: 50.3%;
+    right: 50%;
+    width: 50%;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #61afff;
+    transform-origin: 100%;
+    transform: rotate(89.8deg);
+}
+.hour{
+    width: 20%;
+    z-index: 3;
+}
+.minute{
+    width: 25%;
+    height: 3px;
+    z-index: 10;
+   
+}
+.second{
+    background: #ee791a;
+    width: 30%;
+    height: 2px;
+    z-index: 9;
+   
+}
